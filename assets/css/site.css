@@ -1,0 +1,87 @@
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    color: hsl(220, 13%, 13%);
+}
+
+/* some adjustments to bootstrap's offcanvas components */
+.offcanvas-width {
+    width: 18em !important;
+}
+
+.offcanvas[aria-modal="true"] {
+    transition: all .25s linear;
+}
+/* end offcanvas */
+
+.cart-collapse {
+    top: 4.5em;
+    width: 22em;
+    right: 0;
+    margin-right: .7em;
+    height: 15em;
+    box-shadow: 0px 15px 25px -15px hsl(219, 9%, 45%);
+}
+
+.nav-style {
+    height: 4.5em;
+}
+
+.nav-style:hover {
+    border-bottom: .2em solid hsl(26, 100%, 55%);
+    transition: all .1s linear;
+}
+
+.sneakers-container {
+    height: 6em;
+}
+
+/* new colors styles */
+.text-dark-grayish-blue {
+    color: hsl(219, 9%, 45%)
+}
+
+.border-dark-grayish-blue {
+    border-color: hsl(219, 9%, 45%)
+}
+
+.text-grayish-blue {
+    color: hsl(220, 14%, 75%)
+}
+/* end colors styles */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    .fs-md-6{
+        font-size: 1em !important;
+    }
+
+    .text-md-dark-grayish-blue {
+        color: hsl(219, 9%, 45%)
+    }
+
+    .fw-md-normal {
+        font-weight: normal !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .img-w-lg {
+        width: 3.125em;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .px-xl-6 {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+}

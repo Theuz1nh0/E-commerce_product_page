@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./assets/css/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/site.css">
+
+  <title>E-commerce product page</title>
+</head>
+
+<body>
+  <header>
+    <!-- start main navbar -->
+    <nav class="navbar navbar-expand-md">
+      <div class="container px-xl-6 position-relative sneakers-container align-items-start pt-3">
+        <a href="#" class="navbar-brand d-flex order-2 order-md-1 me-auto">
+          <img src="./assets/images/logo.svg" alt="sneakers logo">
+        </a>
+
+        <!-- button linked to the navbar to open offcanvas -->
+        <button class="navbar-toggler order-1 order-md-2 border-0 me-2" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#navbarNav" aria-controls="navbarNav">
+          <img src="./assets/images/icon-menu.svg" alt="">
+        </button>
+
+        <!-- offcanvas -->
+        <div class="offcanvas offcanvas-start offcanvas-width order-md-2 ms-0 ms-md-3 ms-lg-5 ps-3" tabindex="-1"
+          id="navbarNav" aria-labelledby="navbarNavLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn ms-0 p-0" data-bs-dismiss="offcanvas" aria-label="Close">
+              <img src="./assets/images/icon-close.svg" alt="close buttom">
+            </button>
+          </div>
+
+          <div class="offcanvas-body">
+            <ul class="navbar-nav gap-lg-4 fs-5 fs-md-6 gap-3">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">Collections</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">Men</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">Women</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- end offcanvas -->
+
+        <div class="order-3">
+          <!-- collapse to show what's in the cart -->
+          <div class="collapse position-absolute cart-collapse" id="cartCollapse">
+            <div class="card card-body h-100 p-0 border-0">
+              <div class="border-bottom p-3 pb-4">
+                <span class="fw-bold">Cart</span>
+              </div>
+              <div class="d-flex align-items-center h-100 justify-content-center fw-bold text-dark-grayish-blue">Your
+                cart is empty.</div>
+            </div>
+          </div>
+
+          <!-- button to access the shopping cart -->
+          <button class="btn me-lg-4 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#cartCollapse"
+            aria-expanded="false" aria-controls="cartCollapse">
+            <img src="./assets/images/icon-cart.svg" alt="shopping cart">
+          </button>
+
+          <!-- link to enter the user profile -->
+          <a href="#">
+            <img class="img-fluid img-w-lg" width="30" src="./assets/images/image-avatar.png" alt="profile">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- end main navbar -->
+  </header>
+  <!--
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="./assets/css/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./assets/js/site.js"></script>
+</body>
+
+</html>
