@@ -22,14 +22,14 @@
 <body>
   <header>
     <!-- start main navbar -->
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md pb-0">
       <div class="container px-xl-6 position-relative sneakers-container align-items-start pt-3">
-        <a href="#" class="navbar-brand d-flex order-2 order-md-1 me-auto">
+        <a href="#" class="navbar-brand d-flex order-2 order-md-1 me-auto pt-2">
           <img src="./assets/images/logo.svg" alt="sneakers logo">
         </a>
 
         <!-- button linked to the navbar to open offcanvas -->
-        <button class="navbar-toggler order-1 order-md-2 border-0 me-2" type="button" data-bs-toggle="offcanvas"
+        <button class="navbar-toggler order-1 order-md-2 border-0 me-2 pt-2" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#navbarNav" aria-controls="navbarNav">
           <img src="./assets/images/icon-menu.svg" alt="">
         </button>
@@ -44,25 +44,30 @@
           </div>
 
           <div class="offcanvas-body">
-            <ul class="navbar-nav gap-lg-4 fs-5 fs-md-6 gap-3">
-              <li class="nav-item">
-                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">Collections</a>
+            <ul class="navbar-nav gap-lg-custom gap-md-3 fs-5 fs-md-6">
+              <li class="nav-item nav-style nav-md-style">
+                <a href="#"
+                  class="nav-link fw-semibold fw-md-normal p-0 py-2 text-very-dark-blue text-md-dark-grayish-blue">Collections</a>
               </li>
 
-              <li class="nav-item">
-                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">Men</a>
+              <li class="nav-item nav-style nav-md-style">
+                <a href="#"
+                  class="nav-link fw-semibold fw-md-normal p-0 py-2 text-very-dark-blue text-md-dark-grayish-blue">Men</a>
               </li>
 
-              <li class="nav-item">
-                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">Women</a>
+              <li class="nav-item nav-style nav-md-style">
+                <a href="#"
+                  class="nav-link fw-semibold fw-md-normal px-0 text-very-dark-blue text-md-dark-grayish-blue">Women</a>
               </li>
 
-              <li class="nav-item">
-                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">About</a>
+              <li class="nav-item nav-style nav-md-style">
+                <a href="#"
+                  class="nav-link fw-semibold fw-md-normal px-0 text-very-dark-blue text-md-dark-grayish-blue">About</a>
               </li>
 
-              <li class="nav-item">
-                <a href="#" class="nav-link text-md-dark-grayish-blue fw-semibold fw-md-normal nav-style px-0">Contact</a>
+              <li class="nav-item nav-style nav-md-style">
+                <a href="#"
+                  class="nav-link fw-semibold fw-md-normal px-0 text-very-dark-blue text-md-dark-grayish-blue">Contact</a>
               </li>
             </ul>
           </div>
@@ -72,7 +77,7 @@
 
         <div class="order-3">
           <!-- collapse to show what's in the cart -->
-          <div class="collapse position-absolute cart-collapse" id="cartCollapse">
+          <div class="collapse position-absolute cart-collapse z-3" id="cartCollapse">
             <div class="card card-body h-100 p-0 border-0">
               <div class="border-bottom p-3 pb-4">
                 <span class="fw-bold">Cart</span>
@@ -95,8 +100,109 @@
         </div>
       </div>
     </nav>
+
+    <div class="container px-xl-6 d-none d-md-block">
+      <hr class="m-0">
+    </div>
     <!-- end main navbar -->
   </header>
+
+  <main class="mt-md-6 mb-custom">
+    <div class="container px-xl-6">
+      <div class="row">
+        <div class="col-12 col-md">
+          <div id="shoesCarousel" class="carousel slide px-xxl-5 me-lg-3">
+            <div class="d-none d-md-flex carousel-indicators px-lg-5 m-0">
+              <ul class="navbar-nav flex-row position-absolute gap-4 mt-4 px-xxl-5">
+                <li class="nav-item">
+                  <img src="./assets/images/image-product-1-thumbnail.jpg" alt="shoe thumbnail"
+                    data-bs-target="#shoesCarousel" data-bs-slide-to="0"
+                    class="active shoe-thumbnail rounded-3 img-fluid" aria-current="true" aria-label="Slide 1">
+                </li>
+                <li class="nav-item">
+                  <img src="./assets/images/image-product-2-thumbnail.jpg" alt="shoe thumbnail"
+                    data-bs-target="#shoesCarousel" data-bs-slide-to="1" class="shoe-thumbnail rounded-3 img-fluid"
+                    aria-label="Slide 2">
+                </li>
+                <li class="nav-item">
+                  <img src="./assets/images/image-product-3-thumbnail.jpg" alt="shoe thumbnail"
+                    data-bs-target="#shoesCarousel" data-bs-slide-to="2" class="shoe-thumbnail rounded-3 img-fluid"
+                    aria-label="Slide 3">
+                </li>
+                <li class="nav-item">
+                  <img src="./assets/images/image-product-4-thumbnail.jpg" alt="shoe thumbnail"
+                    data-bs-target="#shoesCarousel" data-bs-slide-to="3" class="shoe-thumbnail rounded-3 img-fluid"
+                    aria-label="Slide 4">
+                </li>
+              </ul>
+            </div>
+
+            <div class="carousel-inner rounded-4">
+              <div class="carousel-item active">
+                <img src="./assets/images/image-product-1.jpg" class="d-block w-100" alt="photo of a shoe">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/image-product-2.jpg" class="d-block w-100" alt="photo of a shoe">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/image-product-3.jpg" class="d-block w-100" alt="photo of a shoe">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/images/image-product-4.jpg" class="d-block w-100" alt="photo of a shoe">
+              </div>
+            </div>
+
+            <button class="carousel-control-prev d-md-none" type="button" data-bs-target="#shoesCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next d-md-none" type="button" data-bs-target="#shoesCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md mt-lg-5 pt-md-2 px-0">
+          <div class="ms-lg-5 ms-4">
+            <span class="uppercase fs-7 text-dark-grayish-blue custom-letter-space fw-bold">Sneaker Company</span>
+            <h1 class="fw-bold display-custom mt-3">Fall Limited Edition Sneakers</h1>
+            <p class="mt-4 mt-lg-5 pe-lg-5 text-dark-grayish-blue mb-4">
+              These low-profile sneakers are your perfect casual wear companion. Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+            <div class="mb-2">
+              <span class="h3 fw-bold">$125.00</span><span
+                class="bg-dark text-light py-1 px-2 rounded-2 ms-3">50%</span>
+            </div>
+            <span class="fw-bold text-dark-grayish-blue text-decoration-line-through">$250.00</span>
+            <div class="row mt-4 pt-2 align-items-center">
+              <div class="col-5 col-lg-4 pe-4">
+                <div class="d-flex flex-row align-items-center justify-content-between bg-light-grayish-blue py-1 rounded-3">
+                  <button class="btn" type="button">
+                    <img src="./assets/images/icon-minus.svg" alt="icon minus">
+                  </button>
+                  <span>0</span>
+                  <button class="btn" type="button">
+                    <img src="./assets/images/icon-plus.svg" alt="icon plus">
+                  </button>
+                </div>
+              </div>
+              <div class="col p-0">
+                <button class="btn w-75 bg-orange py-3 rounded-3 d-flex align-items-center justify-content-center" type="button">
+                  <img class="me-3" src="./assets/images/icon-cart.svg" width="20" alt="icon cart">
+                  <span class="fw-semibold">Add to cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
   <!--
   Sneaker Company
 

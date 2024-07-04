@@ -1,5 +1,5 @@
 body {
-    font-family: "Kumbh Sans", sans-serif;
+    font-family: "Kumbh Sans", sans-serif !important;
     color: hsl(220, 13%, 13%);
 }
 
@@ -11,6 +11,7 @@ body {
 .offcanvas[aria-modal="true"] {
     transition: all .25s linear;
 }
+
 /* end offcanvas */
 
 .cart-collapse {
@@ -20,10 +21,6 @@ body {
     margin-right: .7em;
     height: 15em;
     box-shadow: 0px 15px 25px -15px hsl(219, 9%, 45%);
-}
-
-.nav-style {
-    height: 4.5em;
 }
 
 .nav-style:hover {
@@ -36,8 +33,24 @@ body {
 }
 
 /* new colors styles */
+.text-very-dark-blue {
+    color: hsl(218, 12%, 13%);
+}
+
 .text-dark-grayish-blue {
     color: hsl(219, 9%, 45%)
+}
+
+.bg-light-grayish-blue {
+    background: hsl(223, 64%, 98%)
+}
+
+.bg-orange {
+    background: hsl(26, 100%, 55%)
+}
+
+.custom-letter-space {
+    letter-spacing: .15em;
 }
 
 .border-dark-grayish-blue {
@@ -47,7 +60,36 @@ body {
 .text-grayish-blue {
     color: hsl(220, 14%, 75%)
 }
+
 /* end colors styles */
+
+/* bootstrap modifications */
+.carousel-indicators [data-bs-target] {
+    width: auto;
+    height: auto;
+    margin: 0;
+    border: none;
+    opacity: 1;
+}
+
+.carousel-indicators .active {
+    opacity: .3;
+}
+
+/* end bootstrap modifications */
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.fs-7 {
+    font-size: .9rem;
+}
+
+.mb-custom {
+    margin-bottom: 5em;
+}
+
 
 .attribution {
     font-size: 11px;
@@ -59,7 +101,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .fs-md-6{
+    .fs-md-6 {
         font-size: 1em !important;
     }
 
@@ -67,8 +109,16 @@ body {
         color: hsl(219, 9%, 45%)
     }
 
+    .mt-md-6 {
+        margin-top: 5.625em;
+    }
+
     .fw-md-normal {
         font-weight: normal !important;
+    }
+
+    .nav-md-style:hover {
+        height: 5em;
     }
 }
 
@@ -77,11 +127,32 @@ body {
         width: 3.125em;
     }
 
+    .mb-custom {
+        margin-bottom: 10em;
+    }
+
+    .gap-lg-custom {
+        gap: 2em !important;
+    }
+
 }
 
 @media (min-width: 1200px) {
     .px-xl-6 {
-        padding-left: 4em;
-        padding-right: 4em;
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .display-custom {
+
+    }
+}
+
+@media (min-width: 1400px) {
+    .display-custom {
+        font-size: calc(1.425rem + 2.1vw);
+        line-height: 1.2;
+        font-weight: 300;
+        font-size: 3rem;
     }
 }
