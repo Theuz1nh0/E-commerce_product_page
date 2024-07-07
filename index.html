@@ -111,7 +111,9 @@
     <div class="container px-xl-6">
       <div class="row">
         <div class="col-12 col-md">
+          <!-- main carousel -->
           <div id="shoesCarousel" class="carousel slide px-xxl-5 me-lg-3">
+            <!-- main carousel indicators -->
             <div class="d-none d-md-flex carousel-indicators px-lg-5 m-0">
               <ul class="navbar-nav flex-row position-absolute gap-4 mt-4 px-xxl-5">
                 <li class="nav-item">
@@ -135,9 +137,10 @@
                     aria-label="Slide 4">
                 </li>
               </ul>
-            </div>
+            </div> <!-- END main carousel indicators -->
 
-            <div class="carousel-inner rounded-4">
+            <!-- main carousel inner -->
+            <div class="carousel-inner rounded-4" data-bs-toggle="modal" data-bs-target="#shoesModal">
               <div class="carousel-item active">
                 <img src="./assets/images/image-product-1.jpg" class="d-block w-100" alt="photo of a shoe">
               </div>
@@ -150,20 +153,93 @@
               <div class="carousel-item">
                 <img src="./assets/images/image-product-4.jpg" class="d-block w-100" alt="photo of a shoe">
               </div>
-            </div>
+            </div><!-- END main carousel inner -->
 
-            <button class="carousel-control-prev d-md-none" type="button" data-bs-target="#shoesCarousel"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#shoesCarousel" data-bs-slide="prev" onclick="prevMainCarousel(1)">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
 
-            <button class="carousel-control-next d-md-none" type="button" data-bs-target="#shoesCarousel"
-              data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#shoesCarousel" data-bs-slide="next" onclick="nextMainCarousel(1)">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          
+          <!-- Carousel Modal -->
+          <div class="modal fade" id="shoesModal" tabindex="-1" aria-labelledby="shoesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content bg-transparent border-0">
+                <div class="modal-header p-0 pb-3 border-0">
+                  <button type="button" data-bs-dismiss="modal" class="btn ms-auto p-0" aria-label="Close">
+                    <img src="./assets/images/icon-close-modal.svg" alt="icon-close">
+                  </button>
+                </div>
+
+                <!-- shoes modal carousel -->
+                <div id="shoesModalCarousel" class="carousel slide">
+                  <!-- modal body -->
+                  <div class="modal-body p-0">
+                    <div class="carousel-inner rounded-4">
+                      <div class="carousel-item active">
+                        <img src="./assets/images/image-product-1.jpg" class="d-block w-100" alt="photo of a shoe">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./assets/images/image-product-2.jpg" class="d-block w-100" alt="photo of a shoe">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./assets/images/image-product-3.jpg" class="d-block w-100" alt="photo of a shoe">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./assets/images/image-product-4.jpg" class="d-block w-100" alt="photo of a shoe">
+                      </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#shoesModalCarousel"
+                      data-bs-slide="prev" onclick="prevMainCarousel(0)">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#shoesModalCarousel"
+                      data-bs-slide="next" onclick="nextMainCarousel(0)">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div> <!-- END modal body -->
+
+                  <!-- modal footer -->
+                  <div class="modal-footer p-0">
+                    <!-- carousel indicators -->
+                    <div class="d-none d-md-flex carousel-indicators px-lg-5 m-0">
+                      <ul class="navbar-nav flex-row position-absolute gap-4 mt-4 px-xxl-5">
+                        <li class="nav-item">
+                          <img src="./assets/images/image-product-1-thumbnail.jpg" alt="shoe thumbnail"
+                            data-bs-target="#shoesModalCarousel" data-bs-slide-to="0"
+                            class="active shoe-thumbnail rounded-3 img-fluid" aria-current="true" aria-label="Slide 1">
+                        </li>
+                        <li class="nav-item">
+                          <img src="./assets/images/image-product-2-thumbnail.jpg" alt="shoe thumbnail"
+                            data-bs-target="#shoesModalCarousel" data-bs-slide-to="1"
+                            class="shoe-thumbnail rounded-3 img-fluid" aria-label="Slide 2">
+                        </li>
+                        <li class="nav-item">
+                          <img src="./assets/images/image-product-3-thumbnail.jpg" alt="shoe thumbnail"
+                            data-bs-target="#shoesModalCarousel" data-bs-slide-to="2"
+                            class="shoe-thumbnail rounded-3 img-fluid" aria-label="Slide 3">
+                        </li>
+                        <li class="nav-item">
+                          <img src="./assets/images/image-product-4-thumbnail.jpg" alt="shoe thumbnail"
+                            data-bs-target="#shoesModalCarousel" data-bs-slide-to="3"
+                            class="shoe-thumbnail rounded-3 img-fluid" aria-label="Slide 4">
+                        </li>
+                      </ul>
+                    </div> <!-- END carousel indicators -->
+                  </div> <!-- END modal footer -->
+                </div> <!-- END shoes modal carousel -->
+              </div>
+            </div>
+          </div> <!-- END Carousel Modal -->
         </div>
 
         <div class="col-12 col-md mt-lg-5 pt-md-2 px-0">
@@ -181,7 +257,8 @@
             <span class="fw-bold text-dark-grayish-blue text-decoration-line-through">$250.00</span>
             <div class="row mt-4 pt-2 align-items-center">
               <div class="col-5 col-lg-4 pe-4">
-                <div class="d-flex flex-row align-items-center justify-content-between bg-light-grayish-blue py-1 rounded-3">
+                <div
+                  class="d-flex flex-row align-items-center justify-content-between bg-light-grayish-blue py-1 rounded-3">
                   <button class="btn" type="button">
                     <img src="./assets/images/icon-minus.svg" alt="icon minus">
                   </button>
@@ -192,7 +269,8 @@
                 </div>
               </div>
               <div class="col p-0">
-                <button class="btn w-75 bg-orange py-3 rounded-3 d-flex align-items-center justify-content-center" type="button">
+                <button class="btn w-75 bg-orange py-3 rounded-3 d-flex align-items-center justify-content-center"
+                  type="button">
                   <img class="me-3" src="./assets/images/icon-cart.svg" width="20" alt="icon cart">
                   <span class="fw-semibold">Add to cart</span>
                 </button>

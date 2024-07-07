@@ -38,15 +38,15 @@ body {
 }
 
 .text-dark-grayish-blue {
-    color: hsl(219, 9%, 45%)
+    color: hsl(219, 9%, 45%);
 }
 
 .bg-light-grayish-blue {
-    background: hsl(223, 64%, 98%)
+    background: hsl(223, 64%, 98%);
 }
 
 .bg-orange {
-    background: hsl(26, 100%, 55%)
+    background: hsl(26, 100%, 55%);
 }
 
 .custom-letter-space {
@@ -141,10 +141,6 @@ body {
     .px-xl-6 {
         padding-left: 5em;
         padding-right: 5em;
-    }
-
-    .display-custom {
-
     }
 }
 
