@@ -16,16 +16,12 @@ body {
 
 .cart-collapse {
     top: 4.5em;
+    min-width: 16em;
     width: 22em;
     right: 0;
     margin-right: .7em;
-    height: 15em;
+    height: 16em;
     box-shadow: 0px 15px 25px -15px hsl(219, 9%, 45%);
-}
-
-.nav-style:hover {
-    border-bottom: .2em solid hsl(26, 100%, 55%);
-    transition: all .1s linear;
 }
 
 .sneakers-container {
@@ -41,12 +37,34 @@ body {
     color: hsl(219, 9%, 45%);
 }
 
+.text-grayish-blue {
+    color: hsl(220, 14%, 75%);
+}
+
 .bg-light-grayish-blue {
     background: hsl(223, 64%, 98%);
 }
 
 .bg-orange {
     background: hsl(26, 100%, 55%);
+}
+
+.border-avatar:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
+.btn-cart:hover {
+    opacity: 1 !important;
+}
+
+.nav-style:hover {
+    border-bottom: .2em solid hsl(26, 100%, 55%);
+}
+
+.border-avatar:hover,
+.btn-cart:hover,
+.nav-style:hover {
+    transition: all .08s linear;
 }
 
 .custom-letter-space {

@@ -19,7 +19,7 @@
   <title>E-commerce product page</title>
 </head>
 
-<body>
+<body onload="createElements()">
   <header>
     <!-- start main navbar -->
     <nav class="navbar navbar-expand-md pb-0">
@@ -82,20 +82,22 @@
               <div class="border-bottom p-3 pb-4">
                 <span class="fw-bold">Cart</span>
               </div>
-              <div class="d-flex align-items-center h-100 justify-content-center fw-bold text-dark-grayish-blue">Your
-                cart is empty.</div>
+              <div class="d-flex align-items-center flex-column p-4 h-100 justify-content-center fw-bold text-dark-grayish-blue" id="cartProducts">
+                Your cart is empty.
+              </div>
             </div>
           </div>
 
           <!-- button to access the shopping cart -->
-          <button class="btn me-lg-4 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#cartCollapse"
-            aria-expanded="false" aria-controls="cartCollapse">
+          <button class="btn me-lg-4 me-2 opacity-50 btn-cart" type="button" data-bs-toggle="collapse"
+            data-bs-target="#cartCollapse" aria-expanded="false" aria-controls="cartCollapse">
             <img src="./assets/images/icon-cart.svg" alt="shopping cart">
           </button>
 
           <!-- link to enter the user profile -->
-          <a href="#">
-            <img class="img-fluid img-w-lg" width="30" src="./assets/images/image-avatar.png" alt="profile">
+          <a href="#" class="d-inline-block">
+            <img class="img-fluid img-w-lg rounded-5 border-avatar" width="30" src="./assets/images/image-avatar.png"
+              alt="profile">
           </a>
         </div>
       </div>
@@ -155,17 +157,19 @@
               </div>
             </div><!-- END main carousel inner -->
 
-            <button class="carousel-control-prev" type="button" data-bs-target="#shoesCarousel" data-bs-slide="prev" onclick="prevMainCarousel(1)">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#shoesCarousel" data-bs-slide="prev"
+              onclick="prevMainCarousel(1)">
+              <span class="carousel-control-prev-icon d-md-none" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
 
-            <button class="carousel-control-next" type="button" data-bs-target="#shoesCarousel" data-bs-slide="next" onclick="nextMainCarousel(1)">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#shoesCarousel" data-bs-slide="next"
+              onclick="nextMainCarousel(1)">
+              <span class="carousel-control-next-icon d-md-none" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          
+
           <!-- Carousel Modal -->
           <div class="modal fade" id="shoesModal" tabindex="-1" aria-labelledby="shoesModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -211,8 +215,8 @@
                   <!-- modal footer -->
                   <div class="modal-footer p-0">
                     <!-- carousel indicators -->
-                    <div class="d-none d-md-flex carousel-indicators px-lg-5 m-0">
-                      <ul class="navbar-nav flex-row position-absolute gap-4 mt-4 px-xxl-5">
+                    <div class="carousel-indicators px-lg-5 m-0">
+                      <ul class="navbar-nav flex-row position-absolute gap-4 mt-4 px-5">
                         <li class="nav-item">
                           <img src="./assets/images/image-product-1-thumbnail.jpg" alt="shoe thumbnail"
                             data-bs-target="#shoesModalCarousel" data-bs-slide-to="0"
@@ -259,11 +263,11 @@
               <div class="col-5 col-lg-4 pe-4">
                 <div
                   class="d-flex flex-row align-items-center justify-content-between bg-light-grayish-blue py-1 rounded-3">
-                  <button class="btn" type="button">
+                  <button class="btn" type="button" id="decrease" onclick="changeByOne(this)">
                     <img src="./assets/images/icon-minus.svg" alt="icon minus">
                   </button>
-                  <span>0</span>
-                  <button class="btn" type="button">
+                  <span id="amount">0</span>
+                  <button class="btn" type="button" id="increase" onclick="changeByOne(this)">
                     <img src="./assets/images/icon-plus.svg" alt="icon plus">
                   </button>
                 </div>
@@ -272,7 +276,7 @@
                 <button class="btn w-75 bg-orange py-3 rounded-3 d-flex align-items-center justify-content-center"
                   type="button">
                   <img class="me-3" src="./assets/images/icon-cart.svg" width="20" alt="icon cart">
-                  <span class="fw-semibold">Add to cart</span>
+                  <span class="fw-semibold" onclick="addProduct()">Add to cart</span>
                 </button>
               </div>
             </div>
